@@ -1,10 +1,13 @@
 <section>
   <img src="../../assets/images/logo.png" alt="Flitterman Exchange logo" />
 
-  <form class="form-inline" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <form class="form-inline" [formGroup]="searchForm" (ngSubmit)="onSubmit(search.value)">
     <div class="form-group mx-sm-3 mb-2">
-      <input type="text" class="form-control" placeholder="Symbol" formControlName="symbol" />
+      <input type="text" class="form-control" placeholder="Symbol" formControlName="symbol" #search />
     </div>
     <button type="submit" class="btn btn-primary mb-2">Search</button>
   </form>
+
+  <div *ngIf="!symbolExists && !submitted" class="alert alert-danger" role="alert">The symbol "{{ symbolSearch }}" was not found</div>
+  <div *ngIf="submitted">Loading...</div>
 </section>

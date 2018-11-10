@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { StocksDataService } from '../stocks-data.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,8 +12,10 @@ export class HomeComponent implements OnInit {
 
   searchForm: FormGroup;
   submitted = false;
+  symbolExists = true;
+  symbolSearch: string;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private stocks: StocksDataService) { }
 
   ngOnInit() {
     this.searchForm = this.formBuilder.group({
@@ -19,8 +23,18 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    console.log('check if the symbol exists');
+  onSubmit(searchValue: string) {
+    if (searchValue === '') { return; }
+    this.submitted = true;
+    this.stocks.checkIfSymbolExists(searchValue)
+      .subscribe(res => {
+        this.submitted = false;
+        this.symbolSearch = searchValue;
+        this.symbolExists = res;
+        if (this.symbolExists) {
+          window.location.href = 'http://ww.google.com';
+        }
+      });
   }
 
 }
