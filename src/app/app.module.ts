@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 // Components go here
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
 
 // Custom modules go here
 
@@ -13,7 +14,8 @@ import { NavComponent } from './nav/nav.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
