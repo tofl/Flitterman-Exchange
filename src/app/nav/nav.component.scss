@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 5px;
+
+  img {
+    height: 55px;
+    width: auto;
+  }
+}
