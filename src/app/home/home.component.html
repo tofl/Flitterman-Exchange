@@ -1,3 +1,10 @@
-<p>
-  home works!
-</p>
+<section>
+  <img src="../../assets/images/logo.png" alt="Flitterman Exchange logo" />
+
+  <form class="form-inline" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <div class="form-group mx-sm-3 mb-2">
+      <input type="text" class="form-control" placeholder="Symbol" formControlName="symbol" />
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Search</button>
+  </form>
+</section>

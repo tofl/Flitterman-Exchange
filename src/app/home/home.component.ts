@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  searchForm: FormGroup;
+  submitted = false;
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.searchForm = this.formBuilder.group({
+      symbol: ['', Validators.required]
+    });
+  }
+
+  onSubmit() {
+    console.log('check if the symbol exists');
   }
 
 }
