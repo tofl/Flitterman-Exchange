@@ -16,7 +16,11 @@ export class HomeComponent implements OnInit {
   symbolExists = true;
   symbolSearch: string;
 
-  constructor(private formBuilder: FormBuilder, private stocks: StocksDataService, private router: Router) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private stocks: StocksDataService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.searchForm = this.formBuilder.group({
@@ -33,7 +37,7 @@ export class HomeComponent implements OnInit {
         this.symbolSearch = searchValue;
         this.symbolExists = res;
         if (this.symbolExists) {
-          this.router.navigate(['/stocks']);
+          this.router.navigate(['/stocks/' + this.symbolSearch]);
         }
       });
   }
