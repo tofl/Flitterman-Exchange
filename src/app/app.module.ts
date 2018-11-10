@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
+import { StockDetailsComponent } from './stock-details/stock-details.component';
 
 // Custom modules go here
 
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    StockDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { StocksDataService } from '../stocks-data.service';
 
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   symbolExists = true;
   symbolSearch: string;
 
-  constructor(private formBuilder: FormBuilder, private stocks: StocksDataService) { }
+  constructor(private formBuilder: FormBuilder, private stocks: StocksDataService, private router: Router) { }
 
   ngOnInit() {
     this.searchForm = this.formBuilder.group({
@@ -32,7 +33,7 @@ export class HomeComponent implements OnInit {
         this.symbolSearch = searchValue;
         this.symbolExists = res;
         if (this.symbolExists) {
-          window.location.href = 'http://ww.google.com';
+          this.router.navigate(['/stocks']);
         }
       });
   }
