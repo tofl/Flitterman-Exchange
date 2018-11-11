@@ -2,4 +2,13 @@
 
 <section>
   <h2>Stock information for : {{ symbol | uppercase }}</h2>
+
+  <canvas baseChart width="970" height="400"
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType"></canvas>
+
 </section>
