@@ -5,7 +5,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
-import 'node_modules/chartjs-financial';
+import { NvD3Module } from 'ng2-nvd3';
+import 'd3';
+import 'nvd3';
 
 
 // Components go here
@@ -30,7 +32,8 @@ import { StockDetailsComponent } from './stock-details/stock-details.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    NvD3Module
   ],
   providers: [],
   bootstrap: [AppComponent]
