@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ChartsModule } from 'ng2-charts';
 import { NvD3Module } from 'ng2-nvd3';
 import 'd3';
 import 'nvd3';
@@ -32,7 +31,6 @@ import { StockDetailsComponent } from './stock-details/stock-details.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    ChartsModule,
     NvD3Module
   ],
   providers: [],
