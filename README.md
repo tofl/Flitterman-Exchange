@@ -36,3 +36,11 @@ In the end, this is what I believe to be a better format for this API :
         },
         ...
 }
+
+## TODO
+- Correct bug related the the charting library where the stock prices are not displayed properly.
+- Implement the search mechanism in the nav bar.
+
+## Possible evolution
+- Display more information (like the trading volumes)
+- Add the possibility to create an account and manage a fake portfolio.
