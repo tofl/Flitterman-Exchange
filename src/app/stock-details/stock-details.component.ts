@@ -70,8 +70,7 @@ export class StockDetailsComponent implements OnInit {
             }
           }
         };
-
-      }
+    }
 
     getTimeSeries() {
         this.stocks.getStockInfo(this.symbol).subscribe(res => {
@@ -109,7 +108,7 @@ export class StockDetailsComponent implements OnInit {
                 data[0]['values'].unshift(dataSet);
             }
             this.data = data;
-            console.log(this.data);
+            console.log(this.data[0]["values"]);
             this.loaded = true;
         }
     }
@@ -126,7 +125,7 @@ export class StockDetailsComponent implements OnInit {
         // let minute = time[1];
         // let second = time[2];
 
-        console.log(new Date(year, month, day).getTime()/1000);
+        //console.log(new Date(year, month, day).getTime()/1000);
 
         return new Date(year, month, day).getTime()/1000;
     }
