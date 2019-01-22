@@ -2,6 +2,8 @@
 
 This is an experimental project meant to test the Alpha Vantage API as well as the NV3 Javascript charts library.
 
+![Homepage of the app](https://raw.githubusercontent.com/tofl/Flitterman-Exchange/master/fex_home.png)
+
 ## What I learned
 Alpha Vantage is a great API as it is capable of providing information on a given company's shares. Unfortunately it was also very badly designed. I had to create a whole layer to almost entirely reformat the API to my needs. The JSON body of the API currently looks like this :
 
